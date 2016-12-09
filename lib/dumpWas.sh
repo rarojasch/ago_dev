@@ -1,5 +1,5 @@
-insta="server1"
-rutaSP="/u01/IBM/WebSphere/AppServer/profiles/AppSrv01/logs/server1/server1.pid"
+insta=`cat lib/configuracion.txt | awk '/insta=/ && !/awk/ {print $2}'`
+rutaSP=`cat lib/configuracion.txt | awk '/rutaSP=/ && !/awk/ {print $2}'`
 
 if [ -f $rutaSP ];
 then
@@ -8,7 +8,7 @@ then
         if [ $appservice = $pid ]
         then
                 kill -3 $pid
-                echo "se ha obtenido el thread dump del servicio $pid."
+                echo "se ha obtenido el javacore del servicio $pid."
         else
                 echo "El proceso no existe."
         fi
@@ -18,7 +18,7 @@ else
         if (( $var  > 2  ));
         then
                 kill -3 $appservice
-                echo "se ha obtenido el thread dump del servicio $appservice."
+                echo "se ha obtenido el javacore del servicio $appservice."
         else
                 echo "El proceso no existe."
         fi
