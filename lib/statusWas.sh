@@ -1,7 +1,7 @@
-ruta="/u01/IBM/WebSphere/AppServer/profiles/AppSrv01/bin/serverStatus.sh"
-insta="server1"
-user="wasadmin"
-pass="wasadmin1"
+ruta=`cat lib/configuracion.txt | awk '/ruta=/ && !/awk/ {print $2}'`
+insta=`cat lib/configuracion.txt | awk '/insta=/ && !/awk/ {print $2}'`
+user=`cat lib/configuracion.txt | awk '/user=/ && !/awk/ {print $2}'`
+pass=`cat lib/configuracion.txt | awk '/pass=/ && !/awk/ {print $2}'`
 estado=`echo $ruta $insta "-username" $user "-password" $pass`
 estadoD=`$estado | awk '/stopped/ && !/awk/ {print "detenido"}'`
 estadoS=`$estado | awk '/STARTED/ && !/awk/ {print "corriendo"}'`
