@@ -1,12 +1,12 @@
-ruta=`cat configuracion.txt | awk '/ruta=/ && !/awk/ {print $2}'`
-ruta2=`cat configuracion.txt | awk '/ruta2=/ && !/awk/ {print $2}'`
-insta=`cat configuracion.txt | awk '/insta=/ && !/awk/ {print $2}'`
-rutaSP=`cat configuracion.txt | awk '/rutaSP=/ && !/awk/ {print $2}'`
-rtemp=`cat configuracion.txt | awk '/rtemp=/ && !/awk/ {print $2}'`
-rtran=`cat configuracion.txt | awk '/rtran=/ && !/awk/ {print $2}'`
-rwste=`cat configuracion.txt | awk '/rwste=/ && !/awk/ {print $2}'`
-user=`cat configuracion.txt | awk '/user=/ && !/awk/ {print $2}'`
-pass=`cat configuracion.txt | awk '/pass=/ && !/awk/ {print $2}'`
+ruta=`cat lib/configuracion.txt | awk '/ruta=/ && !/awk/ {print $2}'`
+ruta2=`cat lib/configuracion.txt | awk '/ruta2=/ && !/awk/ {print $2}'`
+insta=`cat lib/configuracion.txt | awk '/insta=/ && !/awk/ {print $2}'`
+rutaSP=`cat lib/configuracion.txt | awk '/rutaSP=/ && !/awk/ {print $2}'`
+rtemp=`cat lib/configuracion.txt | awk '/rtemp=/ && !/awk/ {print $2}'`
+rtran=`cat lib/configuracion.txt | awk '/rtran=/ && !/awk/ {print $2}'`
+rwste=`cat lib/configuracion.txt | awk '/rwste=/ && !/awk/ {print $2}'`
+user=`cat lib/configuracion.txt | awk '/user=/ && !/awk/ {print $2}'`
+pass=`cat lib/configuracion.txt | awk '/pass=/ && !/awk/ {print $2}'`
 
 
 if [ -f $rutaSP ]
