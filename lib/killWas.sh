@@ -1,5 +1,5 @@
-insta="server1"
-rutaSP="/u01/IBM/WebSphere/AppServer/profiles/AppSrv01/logs/server1/server1.pid"
+insta=`cat lib/configuracion.txt | awk '/insta=/ && !/awk/ {print $2}'`
+rutaSP=`cat lib/configuracion.txt | awk '/rutaSP=/ && !/awk/ {print $2}'`
 
 
 if [ -f $rutaSP ];
